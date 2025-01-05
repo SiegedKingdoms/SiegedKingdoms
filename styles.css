@@ -291,6 +291,7 @@ tr:hover {
         margin-top: 20px;
         max-width: 100%;
         padding: 0;
+        padding-top: 25px;
     }
 
     .main-content p{margin: 10px;}
