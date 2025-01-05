@@ -13,6 +13,30 @@ body {
     overflow: hidden;
 }
 
+/* Title */
+.large-title-text h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+.large-title-text a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.large-title-text a:link {
+    color: rgb(255, 126, 126);
+}
+
+.large-title-text a:visited {
+    color: rgb(187, 93, 93);
+}
+
+.large-title-text a:hover, a:active {
+    color: rgb(194, 93, 93);
+    text-decoration: underline;
+}
+
 /* Links */
 a {
     background-color: transparent;
@@ -40,9 +64,6 @@ a:hover, a:active {
 }
 
 /* Headings */
-h2, h3, h4 {
-    font-family: "Noto Sans Anatolian Hieroglyphs", serif;
-}
 
 h2 {
     font-weight: 500;
@@ -271,6 +292,9 @@ tr:hover {
         max-width: 100%;
         padding: 0;
     }
+
+    .main-content p{margin: 10px;}
+    
 }
 
 @media screen and (max-height: 450px) {
