@@ -46,6 +46,7 @@ a:active {
 
 .column {
     background: rgba(39, 39, 39, 0.742);
+    backdrop-filter: blur(10px);
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
