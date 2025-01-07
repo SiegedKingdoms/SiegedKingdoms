@@ -5,7 +5,7 @@ body {
     padding: 20px 0 0;
     display: flex;
     flex-direction: row;
-    background: url('images/background.png') no-repeat center center fixed;
+    background: url('../images/background.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
     min-height: 100vh; /* Allow body height to expand if needed */
@@ -90,6 +90,7 @@ a:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 
 .links-list li {
@@ -117,3 +118,20 @@ a:active {
     outline: none;
 }
 
+.monospace-text {
+    text-align: center;
+    font-family: "Source Code Pro", serif;
+    background-color: #111;
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.online {
+    color: green;
+    font-weight: bold;
+  }
+  .offline {
+    color: red;
+    font-weight: bold;
+  }
