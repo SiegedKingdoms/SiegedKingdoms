@@ -25,13 +25,50 @@
 
         <div class="column">
             <span style="border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
-                <h1>Sieged Kingdoms</h1>
+                <img src="../images/siegedkingdomstitlemodel.png" style="width: 100%; height: auto;">
             </span>
-            <p>Sieged Kingdoms is a Geopolitical-MMORPG server where you can build your ideal nation from the ground up,
-                start your dream business, become a performer and tour the land, or be a nomad living a life of
-                lawlessness. The goal is not to destroy nations but to spread power and influence socially,
-                economically, politically, or militarily.</p>
-            <p>Make sure to download the <a href="https://www.curseforge.com/minecraft/modpacks/sieged-kingdoms" target="_blank">most recent version of the modpack from CurseForge</a></p>
+            <p><strong>Sieged Kingdoms</strong> is a Geopolitical-MMORPG server where you can bring your dreams to life.
+            </p>
+            <p>Build your ideal nation from scratch, launch your dream business, become a traveling performer, or live
+                the thrilling life of a nomadic outlaw. Instead of aiming to destroy nations, the focus is on spreading
+                your power and influence—whether through social, economic, political, or military means.</p>
+<div class="monospace-text">
+                <h1>Server Status</h1>
+                <div id="server-status">
+                  Loading server status...
+                </div>
+              
+                <script>
+                  const serverAddress = "172.255.251.28:25577";
+                  const statusDiv = document.getElementById("server-status");
+              
+                  // Function to fetch and display the server status
+                  async function fetchServerStatus() {
+                    try {
+                      const response = await fetch(`https://api.mcstatus.io/v2/status/java/${serverAddress}`);
+                      const data = await response.json();
+              
+                      if (data.online) {
+          const onlinePlayers = data.players.online;
+          const maxPlayers = data.players.max;
+          statusDiv.innerHTML = `
+            <p>The server is <span class="online">online</span>.</p>
+            <p>Players Online: ${onlinePlayers}/${maxPlayers}</p>
+          `;
+        } else {
+          statusDiv.innerHTML = `
+            <p>The server is <span class="offline">offline</span>.</p>
+          `;
+        }
+      } catch (error) {
+        statusDiv.innerHTML = `<p>Error fetching server status: ${error.message}</p>`;
+      }
+    }
+                  fetchServerStatus();
+                </script>
+</div>
+            <p>Make sure to download the <a href="https://www.curseforge.com/minecraft/modpacks/sieged-kingdoms"
+                    target="_blank">most recent version of the modpack from CurseForge</a></p>
         </div>
 
         <div class="column">
@@ -41,7 +78,9 @@
                     <li><a href="rules.html">Rules</a></li>
                     <li><a href="https://discord.gg/q7jBxWf42W">Discord Server</a></li>
                     <li><a href="https://siegedkingdoms.tebex.io/">Support the Server</a></li>
-                    <li><a href="https://patreon.com/SiegedKingdoms?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Support the Manga</a></li>
+                    <li><a
+                            href="https://patreon.com/SiegedKingdoms?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Support
+                            the Manga</a></li>
                     <li><a href="https://www.youtube.com/@SiegedKingdoms">YouTube</a></li>
                     <li><a href="https://twitter.com/siegedkingdoms">Twitter</a></li>
                     <li><a href="https://bsky.app/profile/siegedkingdoms.bsky.social">Bluesky</a></li>
