@@ -5,7 +5,7 @@ body {
     padding: 20px 0 0;
     display: flex;
     flex-direction: row;
-    background: url('../images/background.png') no-repeat center center fixed;
+    background: url('images/background.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
     min-height: 100vh; /* Allow body height to expand if needed */
