@@ -2,96 +2,120 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Server Rules</title>
-    <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Server Rules</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="column">
-            <h2>Blog</h2>
-            <p>coming soon :3</p>
-        </div>
-
-        <div class="column">
-            <span style="border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
-                <img src="images/siegedkingdomstitlemodel.png" style="width: 100%; height: auto;">
-            </span>
-            <p><strong>Sieged Kingdoms</strong> is a Geopolitical-MMORPG server where you can bring your dreams to life.
-            </p>
-            <p>Build your ideal nation from scratch, launch your dream business, become a traveling performer, or live
-                the thrilling life of a nomadic outlaw. Instead of aiming to destroy nations, the focus is on spreading
-                your power and influence—whether through social, economic, political, or military means.</p>
-<div class="monospace-text">
-                <h1>Server Status</h1>
-                <div id="server-status">
-                  Loading server status...
-                </div>
-              
-                <script>
-                  const serverAddress = "172.255.251.28:25577";
-                  const statusDiv = document.getElementById("server-status");
-              
-                  // Function to fetch and display the server status
-                  async function fetchServerStatus() {
-                    try {
-                      const response = await fetch(`https://api.mcstatus.io/v2/status/java/${serverAddress}`);
-                      const data = await response.json();
-              
-                      if (data.online) {
-          const onlinePlayers = data.players.online;
-          const maxPlayers = data.players.max;
-          statusDiv.innerHTML = `
-            <p>The server is <span class="online">online</span>.</p>
-            <p>Players Online: ${onlinePlayers}/${maxPlayers}</p>
-          `;
-        } else {
-          statusDiv.innerHTML = `
-            <p>The server is <span class="offline">offline</span>.</p>
-          `;
-        }
-      } catch (error) {
-        statusDiv.innerHTML = `<p>Error fetching server status: ${error.message}</p>`;
-      }
-    }
-                  fetchServerStatus();
-                </script>
-</div>
-            <p>Make sure to download the <a href="https://www.curseforge.com/minecraft/modpacks/sieged-kingdoms"
-                    target="_blank">most recent version of the modpack from CurseForge</a></p>
-        </div>
-
-        <div class="column">
-            <div class="links-container">
-                <h2>Links</h2>
-                <ul class="links-list">
-                    <li><a href="rules/index">Rules</a></li>
-                    <li><a href="http://172.255.251.28:25575/">Bluemap</a></li>
-                    <li><a href="https://discord.gg/q7jBxWf42W">Discord Server</a></li>
-                    <li><a href="https://siegedkingdoms.tebex.io/">Support the Server</a></li>
-                    <li><a
-                            href="https://patreon.com/SiegedKingdoms?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Support
-                            the Manga</a></li>
-                    <li><a href="https://www.youtube.com/@SiegedKingdoms">YouTube</a></li>
-                    <li><a href="https://twitter.com/siegedkingdoms">Twitter</a></li>
-                    <li><a href="https://bsky.app/profile/siegedkingdoms.bsky.social">Bluesky</a></li>
-                    <li><a href="http://instagram.com/siegedkingdoms">Instagram</a></li>
-                    <li><a href="https://www.tiktok.com/@siegedkingdoms">TikTok</a></li>
-                    <li><a href="https://www.reddit.com/r/siegedkingdoms/">Reddit</a></li>
-                </ul>
-            </div>
-        </div>
+  <div class="container">
+    <div class="column">
+      <h2>Blog</h2>
+      <p>coming soon :3</p>
     </div>
+
+    <div class="column">
+      <span style="border-bottom: 2px solid rgba(255, 255, 255, 0.5);">
+        <img src="images/siegedkingdomstitlemodel.png" style="width: 100%; height: auto;">
+      </span>
+      <p><strong>Sieged Kingdoms</strong> is a Geopolitical-MMORPG server where you can bring your dreams to life.
+      </p>
+      <p>Build your ideal nation from scratch, launch your dream business, become a traveling performer, or live
+        the thrilling life of a nomadic outlaw. Instead of aiming to destroy nations, the focus is on spreading
+        your power and influence—whether through social, economic, political, or military means.</p>
+      <div class="monospace-text">
+        <h1>Server Status</h1>
+        <div id="server-status">
+          Loading server status...
+        </div>
+
+        <script>
+          const serverAddress = "172.255.251.28:25577";
+          const statusDiv = document.getElementById("server-status");
+
+          // Function to fetch and display the server status
+          async function fetchServerStatus() {
+            try {
+              const response = await fetch(`https://api.mcstatus.io/v2/status/java/${serverAddress}`);
+              const data = await response.json();
+
+              // Check if the server is online
+              if (data.online) {
+                const onlinePlayers = data.players.online;
+                const maxPlayers = data.players.max;
+                const serverName = "<span><span style=\"color: #aa00aa;\">--===</span><span style=\"color: #55ff55;font-weight: bold;\"> Sieged Kingdoms:</span><span style=\"color: #ffaa00;font-weight: bold;\"> World at War</span><span style=\"color: #aa00aa;\"> ===--</span>";
+                const favicon = data.icon;  // Get the server's logo/favicon
+
+                // Update the HTML content with Minecraft-like layout
+                statusDiv.innerHTML = `
+                  <div class="server-info">
+                    <div class="server-logo">
+                      <img src="${favicon}" alt="Server Logo" class="logo"/>
+                    </div>
+                    <div class="server-details">
+                      <h3 class="server-name">${serverName}</h3>
+                      <p class="server-status"><span class="online">Online</span></p>
+                      <p class="player-count">${onlinePlayers} / ${maxPlayers} Players</p>
+                    </div>
+                  </div>
+                `;
+              } else {
+                statusDiv.innerHTML = `
+                  <div class="server-info">
+                    <div class="server-logo">
+                      <img src="default-logo.png" alt="Server Logo" class="logo"/> <!-- Placeholder for offline -->
+                    </div>
+                    <div class="server-details">
+                      <h3 class="server-name">Server Offline</h3>
+                      <p class="server-status"><span class="offline">Offline</span></p>
+                    </div>
+                  </div>
+                `;
+              }
+            } catch (error) {
+              statusDiv.innerHTML = `<p>Error fetching server status: ${error.message}</p>`;
+            }
+          }
+
+          fetchServerStatus();
+        </script>
+
+
+      </div>
+      <p>Make sure to download the <a href="https://www.curseforge.com/minecraft/modpacks/sieged-kingdoms"
+          target="_blank">most recent version of the modpack from CurseForge</a></p>
+    </div>
+
+    <div class="column">
+      <div class="links-container">
+        <h2>Links</h2>
+        <ul class="links-list">
+          <li><a href="rules/index">Rules</a></li>
+          <li><a href="http://172.255.251.28:25575/">Bluemap</a></li>
+          <li><a href="https://discord.gg/q7jBxWf42W">Discord Server</a></li>
+          <li><a href="https://siegedkingdoms.tebex.io/">Support the Server</a></li>
+          <li><a
+              href="https://patreon.com/SiegedKingdoms?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Support
+              the Manga</a></li>
+          <li><a href="https://www.youtube.com/@SiegedKingdoms">YouTube</a></li>
+          <li><a href="https://twitter.com/siegedkingdoms">Twitter</a></li>
+          <li><a href="https://bsky.app/profile/siegedkingdoms.bsky.social">Bluesky</a></li>
+          <li><a href="http://instagram.com/siegedkingdoms">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@siegedkingdoms">TikTok</a></li>
+          <li><a href="https://www.reddit.com/r/siegedkingdoms/">Reddit</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
