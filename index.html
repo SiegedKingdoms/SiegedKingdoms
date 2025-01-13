@@ -2,17 +2,21 @@
 <html lang="en">
 
 <head>
+  <meta property="og:title" content="Sieged Kingdoms" />
+  <meta property="og:description" content="MMO-RP Modded Minecraft Server." />
+  <meta property="og:image" content="../images/posteridea3.webp" />
+  <meta property="og:url" content="https://siegedkingdoms.github.io/SiegedKingdoms/" />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/x-icon" href="images/logo.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
     rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Server Rules</title>
+  <title>Sieged Kingdoms</title>
   <link rel="stylesheet" href="index.css">
 </head>
 
@@ -94,40 +98,42 @@
       <p>Make sure to download the <a href="https://www.curseforge.com/minecraft/modpacks/sieged-kingdoms"
           target="_blank">most recent version of the modpack from CurseForge</a></p>
 
-          <div class="photo-album">
-            <img src="images/promotional-screenshots/2024-08-24_22.48.41.png" class="active" alt="Players with weapons equiped standing on grass">
-            <img src="images/promotional-screenshots/2024-10-12_23.37.39.png" alt="3 Players inside a purple room, talking while sat down at a table">
-            <img src="images/promotional-screenshots/2024-11-15_21.42.54.png" alt="Players waiting for a train">
-            <img src="images/promotional-screenshots/2024-11-15_21.56.41.png" alt="Players at a test chamber">
-            <img src="images/promotional-screenshots/2024-12-19_20.42.51.png" alt="Players partaking in a kart race">
-            <img src="images/promotional-screenshots/2024-12-19_20.55.18.png" alt="Players partaking in a kart race">
-            <img src="images/promotional-screenshots/2025-01-07_03.13.43.png" alt="Players in front of a communist flag">
-            <img src="images/promotional-screenshots/image3.png" alt="Soldiers brandishing weaponry">
-            <img src="images/promotional-screenshots/image4.png" alt="Players at a nightclub">
-            <img src="images/promotional-screenshots/posteridea3.webp" alt="Promotional poster">
+      <div class="photo-album">
+        <img src="images/promotional-screenshots/2024-08-24_22.48.41.png" class="active"
+          alt="Players with weapons equiped standing on grass">
+        <img src="images/promotional-screenshots/2024-10-12_23.37.39.png"
+          alt="3 Players inside a purple room, talking while sat down at a table">
+        <img src="images/promotional-screenshots/2024-11-15_21.42.54.png" alt="Players waiting for a train">
+        <img src="images/promotional-screenshots/2024-11-15_21.56.41.png" alt="Players at a test chamber">
+        <img src="images/promotional-screenshots/2024-12-19_20.42.51.png" alt="Players partaking in a kart race">
+        <img src="images/promotional-screenshots/2024-12-19_20.55.18.png" alt="Players partaking in a kart race">
+        <img src="images/promotional-screenshots/2025-01-07_03.13.43.png" alt="Players in front of a communist flag">
+        <img src="images/promotional-screenshots/image3.png" alt="Soldiers brandishing weaponry">
+        <img src="images/promotional-screenshots/image4.png" alt="Players at a nightclub">
+        <img src="images/promotional-screenshots/posteridea3.webp" alt="Promotional poster">
 
-            <script>
-              document.addEventListener('DOMContentLoaded', () => {
-                  const images = document.querySelectorAll('.photo-album img');
-                  let currentIndex = 0;
-          
-                  function showNextImage() {
-                      // Remove 'active' class from current image
-                      images[currentIndex].classList.remove('active');
-                      
-                      // Increment index and loop back if at the end
-                      currentIndex = (currentIndex + 1) % images.length;
-          
-                      // Add 'active' class to the next image
-                      images[currentIndex].classList.add('active');
-                  }
-          
-                  // Change image every 5 seconds
-                  setInterval(showNextImage, 5000);
-              });
-          </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.photo-album img');
+            let currentIndex = 0;
 
-        </div>
+            function showNextImage() {
+              // Remove 'active' class from current image
+              images[currentIndex].classList.remove('active');
+
+              // Increment index and loop back if at the end
+              currentIndex = (currentIndex + 1) % images.length;
+
+              // Add 'active' class to the next image
+              images[currentIndex].classList.add('active');
+            }
+
+            // Change image every 5 seconds
+            setInterval(showNextImage, 5000);
+          });
+        </script>
+
+      </div>
     </div>
 
     <div class="column">
