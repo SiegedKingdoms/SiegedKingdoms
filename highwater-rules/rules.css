@@ -1,0 +1,309 @@
+/* General Styles */
+body {
+    font-family: "Bitter", serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Title */
+.large-title-text h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+.large-title-text a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.large-title-text a:link {
+    color: rgb(255, 126, 126);
+}
+
+.large-title-text a:visited {
+    color: rgb(187, 93, 93);
+}
+
+.large-title-text a:hover, a:active {
+    color: rgb(194, 93, 93);
+    text-decoration: underline;
+}
+
+/* Links */
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(126, 249, 255);
+}
+
+a:visited {
+    color: rgb(93, 183, 187);
+}
+
+a:hover, a:active {
+    color: rgb(93, 189, 194);
+    text-decoration: underline;
+}
+
+/* Text Alignments */
+.center {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Headings */
+
+h2 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+h3, h4 {
+    font-weight: 400;
+}
+
+/* Rule Section */
+.rule {
+    background-color: #111111b9;
+    border-radius: 25px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.rule ol {
+    list-style: none;
+    counter-reset: item;
+}
+
+.rule li {
+    counter-increment: item;
+    margin: 0 10px 20px;
+}
+
+.rule li:before {
+    content: counter(item);
+    margin-right: 10px;
+    background: rgb(26, 26, 26);
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Incident Section */
+.incident {
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar a {
+    padding: 8px 20px;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Open Button */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(39, 39, 39, 0.742);
+    border-radius: 10px;
+    box-shadow: 0 4px 40px rgba(255, 255, 255, 0.665);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+/* Main Content */
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 1;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+    background: rgba(39, 39, 39, 0.742);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.665);
+    overflow-y: auto;
+}
+
+.main-content section {
+    margin-bottom: 40px;
+}
+
+.main-content h2 {
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.main-content h3 {
+    text-align: center;
+}
+
+.main-content p {
+    line-height: 1.6;
+}
+
+/* Two Columns Layout */
+.two-columns {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-columns .left,
+.two-columns .right {
+    flex: 1;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f1f1f;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #171717;
+}
+
+/* Highlights */
+.highlight {
+    cursor: help;
+    color: rgb(255, 136, 136);
+    text-decoration: underline;
+}
+
+.popup {
+    position: absolute;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    max-width: 300px;
+    color: #111;
+}
+
+/* Monospace Text */
+.monospace-text {
+    text-align: center;
+    font-family: "Source Code Pro", serif;
+    background-color: #111;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+/* Severity Levels */
+.minor {
+    color: #fbf987;
+}
+
+.moderate {
+    color: #faba82;
+}
+
+.severe {
+    color: #fb7c7c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .main-content {
+        margin-top: 20px;
+        max-width: 100%;
+        padding: 0;
+        padding-top: 25px;
+    }
+
+    .main-content p{margin: 10px;}
+    
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
